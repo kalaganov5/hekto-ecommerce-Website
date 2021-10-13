@@ -1,0 +1,24 @@
+.search {
+  display: grid;
+  grid-template-columns: 1fr 50px;
+}
+
+.search__input {
+  border: 2px solid @color-lavender;
+  border-right: none;
+  grid-column: 1;
+  box-sizing: border-box;
+  padding-left: 5px;
+  padding-right: 5px;
+  min-height: 40px;
+}
+
+.search__button {
+  grid-column: 2;
+  height: 100%;
+  width: 100%;
+  background-color: @color-wild-strawberry;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
