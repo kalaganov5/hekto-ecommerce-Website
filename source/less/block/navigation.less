@@ -1,7 +1,8 @@
 .navigation {
   display: flex;
   align-items: center;
-  margin-left: 10px
+  margin-left: 10px;
+  position: relative;
 }
 
 .navigation__list {
@@ -24,10 +25,12 @@
   padding: 15px 5px;
   flex-direction: column;
   row-gap: 10px;
+  background-color: @color-white;
 }
 
-.navigation__link, .menu-second__link {
-  font-family: "Lato";
+.navigation__link,
+.menu-second__link {
+  font-family: "Lato", "Roboto", sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 20px;
@@ -46,11 +49,53 @@
     left: 2px;
   }
 
-  &:hover, &--active  {
+  &:hover,
+  &--active {
     color: @color-wild-strawberry;
 
     &:not(:only-child)::after {
       content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.66675 6L8.00008 11.3333L13.3334 6' stroke='%23FB2E86' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     }
+  }
+}
+
+.navigation-slider {
+  .list-style-none();
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 170px;
+  margin-bottom: -25px;
+}
+
+.navigation-slider__item {
+  position: relative;
+  min-width: 10px;
+}
+
+.navigation-slider__label {
+  &::before {
+    content: "";
+    transform: rotate(45deg);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    border: 2px solid @color-wild-strawberry;
+    cursor: pointer;
+  }
+}
+
+.navigation-slider__button:checked ~ .navigation-slider__label {
+  &::before {
+    background-color: @color-wild-strawberry;
+  }
+}
+
+.navigation-slider__button:focus ~ .navigation-slider__label {
+  &::before {
+    outline: 2px solid @color-black;
   }
 }

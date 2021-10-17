@@ -21,7 +21,6 @@
 }
 
 .header__main {
-
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: @color-white;
@@ -35,9 +34,20 @@
 
 .header__navigation {
   grid-column: 3;
-
 }
 
 .header__search {
   grid-column: 4;
+}
+
+.header__bottom {
+  display: grid;
+  padding-top: 95px;
+  padding-bottom: 95px;
+  background-color: @color-ghost-white;
+  grid-template-columns: minmax(20px, auto) @width-desktop-wrapper minmax(20px, auto);
+
+  & > * {
+    grid-column: 2;
+  }
 }
