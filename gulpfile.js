@@ -47,11 +47,12 @@ const html = () => {
 // Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/script.js")
+  return gulp.src("source/js/**/*.js")
     .pipe(gulp.dest("build/js"))
     .pipe(terser())
-    .pipe(rename("script.min.js"))
-    .pipe(gulp.dest("build/js"))
+    // Нужно доработать минификацию
+    // .pipe(rename("script.min.js"))
+    // .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
 
@@ -141,7 +142,7 @@ const reload = done => {
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles, reload));
-  gulp.watch("source/js/script.js", gulp.series(scripts, reload));
+  gulp.watch("source/js/**/*.js", gulp.series(scripts, reload));
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
