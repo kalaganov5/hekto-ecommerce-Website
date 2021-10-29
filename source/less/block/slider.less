@@ -1,3 +1,11 @@
+.slider {
+  overflow: hidden;
+}
+
+.slider__list {
+  .list-style-none();
+}
+
 .slider__subtitle {
   font-family: "Lato", "Roboto", sans-serif;
   font-weight: 700;
@@ -27,13 +35,10 @@
 }
 
 .slider__item {
-  display: none;
-
-  &--active {
-    position: relative;
-    display: grid;
-    grid-template-columns: 56% 44%;
-  }
+  position: relative;
+  display: grid;
+  grid-template-columns: calc(@width-desktop-wrapper / 100 * 56) calc(@width-desktop-wrapper / 100 * 44);
+  grid-template-rows: 0 auto;
 }
 
 .slider__description {

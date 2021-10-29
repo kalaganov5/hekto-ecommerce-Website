@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hekto - online store</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="body">
@@ -122,9 +123,9 @@
           </button>
         </form>
       </div>
-      <div class="header__bottom header-extra">
-        <ul class="header-extra__slider-list slider">
-          <li class="slider__item slider__item--active">
+      <div class="header__bottom slider swipper">
+        <ul class="slider__list swiper-wrapper">
+          <li class="slider__item swiper-slide">
             <div class="slider__lamp"></div>
             <div class="slider__description">
               <p class="slider__subtitle">Best Furniture For Your Castle....</p>
@@ -140,11 +141,11 @@
               </picture>
             </div>
           </li>
-          <li class="slider__item">
+          <li class="slider__item swiper-slide">
             <div class="slider__description">
-              <p class="slider__subtitle">2 Best Furniture For Your Castle....</p>
-              <p class="slider__title">New Furniture Collection Trends in 2020</p>
-              <p class="slider__additional-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing<br> in phasellus non in justo.</p>
+              <p class="slider__subtitle">Best Lorem Ipsum....</p>
+              <p class="slider__title">Lorem Ipsum is simply dummy text of the printing</p>
+              <p class="slider__additional-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
               <a href="shop.html" class="slider__link button">Shop Now</a>
             </div>
             <div class="slider__image-box">
@@ -154,14 +155,16 @@
               </picture>
             </div>
           </li>
-          <li class="slider__item">
+          <li class="slider__item swiper-slide">
+            <div class="slider__lamp"></div>
             <div class="slider__description">
-              <p class="slider__subtitle">3 Best Furniture For Your Castle....</p>
-              <p class="slider__title">New Furniture Collection Trends in 2020</p>
-              <p class="slider__additional-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing<br> in phasellus non in justo.</p>
+              <p class="slider__subtitle">Best Lorem Ipsum....</p>
+              <p class="slider__title">Lorem Ipsum is simply dummy text of the printing</p>
+              <p class="slider__additional-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
               <a href="shop.html" class="slider__link button">Shop Now</a>
             </div>
             <div class="slider__image-box">
+              <div class="slider__sale-box">50% off</div>
               <picture>
                 <source type="image/webp" srcset="img/products/shell-shaped-armchair-pink-velvet-fabric-one-seater-sofa-for-living-room.webp 1x, img/products/shell-shaped-armchair-pink-velvet-fabric-one-seater-sofa-for-living-room@2x.webp 2x">
                 <img class="slider__image" src="img/products/shell-shaped-armchair-pink-velvet-fabric-one-seater-sofa-for-living-room.png" srcset="img/products/shell-shaped-armchair-pink-velvet-fabric-one-seater-sofa-for-living-room@2x.png 2x" alt="" width="706" height="689">
@@ -169,20 +172,7 @@
             </div>
           </li>
         </ul>
-        <ul class="header-extra__navigation-slider navigation-slider">
-          <li class="navigation-slider__item">
-            <input class="navigation-slider__button visually-hidden" type="radio" name="navigation-slider" id="slider-1" checked>
-            <label class="navigation-slider__label" for="slider-1"><span class="visually-hidden">Select</span></label>
-          </li>
-          <li class="navigation-slider__item">
-            <input class="navigation-slider__button visually-hidden" type="radio" name="navigation-slider" id="slider-2">
-            <label class="navigation-slider__label" for="slider-2"><span class="visually-hidden">Select</span></label>
-          </li>
-          <li class="navigation-slider__item">
-            <input class="navigation-slider__button visually-hidden" type="radio" name="navigation-slider" id="slider-3">
-            <label class="navigation-slider__label" for="slider-3"><span class="visually-hidden">Select</span></label>
-          </li>
-        </ul>
+        <div class="header-extra__navigation-slider navigation-slider"></div>
       </div>
     </header>
     <script type="module" src="./js/main.js"></script>

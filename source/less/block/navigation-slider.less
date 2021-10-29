@@ -1,0 +1,29 @@
+.navigation-slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 105px;
+  margin-bottom: -40px;
+}
+
+.navigation-slider__label {
+  transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+  box-sizing: border-box;
+  border: 2px solid @color-wild-strawberry;
+  cursor: pointer;
+  border-radius: 0;
+  background-color: transparent;
+  opacity: 1;
+
+  &.swiper-pagination-bullet-active {
+    background-color: @color-wild-strawberry;
+  }
+
+  &:focus {
+    outline: 2px solid @color-black;
+  }
+}

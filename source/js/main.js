@@ -1,3 +1,2 @@
-import {sliderHandler} from './slider.js';
-// Вызов обработчика слайдера
-sliderHandler();
+import {sliderHeader} from './slider-header.js';
+sliderHeader;
