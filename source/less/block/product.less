@@ -1,0 +1,134 @@
+.product {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    & .product__box--bottom {
+      background-color: @color-persian-blue;
+    }
+
+    & .product__controls {
+      opacity: 1;
+      .change-smoothly(opacity);
+    }
+
+    & .product__button {
+      display: block;
+    }
+
+    & .product__title,
+    & .product__sku,
+    & .product__price {
+      color: @color-white;
+      .change-smoothly(color);
+    }
+  }
+}
+
+.product__box {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+
+  &--top {
+    background-color: @color-white-smoke-light;
+    height: 235px;
+  }
+
+  &--bottom {
+    background-color: @color-white;
+    .change-smoothly(background-color);
+  }
+}
+
+.product__controls {
+  .list-style-none();
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-self: flex-start;
+  opacity: 0;
+}
+
+.product__image {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 150px;
+}
+
+.product__button {
+  display: none;
+  background-color: @color-malachite;
+  padding: 8px 13px;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: auto;
+}
+
+.product__control {
+  .change-smoothly(display);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+
+
+  &:hover {
+    background-color: @color-lavender;
+    box-shadow: 0 0 4px lighten(@color-black, 90%);
+
+    & .product__icon {
+      fill: @color-persian-blue;
+    }
+  }
+}
+
+.product__icon {
+  fill: url("#control-linear-gradient");
+}
+
+.product__title {
+  font-family: "Lato", "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: @color-wild-strawberry;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.product__colors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 5px;
+  column-gap: 5px;
+  .list-style-none();
+  max-height: 200px;
+}
+
+.product__color {
+  display: inline-block;
+  width: 14px;
+  height: 4px;
+  background-color: @color-black;
+  border-radius: 10px;
+}
+
+.product__sku,
+.product__price {
+  font-family: "Josefin Sans", "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: @color-midnight-blue;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
