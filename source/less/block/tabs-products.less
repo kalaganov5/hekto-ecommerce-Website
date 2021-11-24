@@ -1,0 +1,31 @@
+.tabs-products {
+  .list-style-none();
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 60px;
+}
+
+.tabs-products__input {
+  display: none;
+
+  &:checked ~ .tabs-products__label {
+    color: @color-wild-strawberry;
+    text-decoration: underline;
+  }
+}
+
+.tabs-products__label {
+  font-family: "Lato", "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+  color: @color-midnight-blue;
+
+  &:hover,
+  &:focus {
+    color: @color-wild-strawberry;
+    text-decoration: underline;
+  }
+}

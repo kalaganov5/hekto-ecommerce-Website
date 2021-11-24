@@ -1,0 +1,95 @@
+.latest-product-list {
+  .list-style-none();
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 120px;
+  column-gap: 37px;
+}
+
+.latest-product-list__item {
+  display: grid;
+  grid-template-areas:
+    "controls image image image empty"
+    "title title title price price";
+  grid-template-columns: 60px repeat(3, 1fr) 60px;
+  grid-template-rows: 270px auto;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, @color-white-smoke-light 270px, transparent 270px);
+  padding-top: 10px;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background-image: none;
+    .change-smoothly(background-image);
+
+    & .latest-product-list__controls {
+      opacity: 1;
+      .change-smoothly(opacity);
+    }
+  }
+}
+
+.latest-product-list__controls {
+  grid-area: controls;
+}
+
+.latest-product-list__image-wrapper {
+  grid-area: image;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.latest-product-list__image {
+  max-width: 225px;
+  max-height: 225px;
+}
+
+.latest-product-list__title {
+  grid-area: title;
+  margin-top: 0;
+}
+
+.latest-product-list__link {
+  font-family: "Josefin Sans", "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: @color-midnight-blue;
+  position: relative;
+  margin-right: auto;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: @color-lavender;
+  }
+}
+
+.latest-product-list__price {
+  grid-area: price;
+  justify-self: flex-end;
+  margin-right: 15px;
+  font-family: "Josefin Sans", "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: @color-midnight-blue;
+  margin-top: 0;
+}
+
+.latest-product-list__price-sale {
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration-line: line-through;
+  color: @color-amaranth;
+}
