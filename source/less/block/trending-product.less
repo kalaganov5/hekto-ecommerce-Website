@@ -1,0 +1,31 @@
+.trending-product {
+  .outline();
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr;
+  grid-auto-rows: min-content;
+  grid-template-areas:
+    "image title title"
+    "image features features"
+    "image button price";
+}
+
+.trending-product__image-wrapper {
+  grid-area: image;
+}
+
+.trending-product__title {
+  grid-area: title;
+}
+
+.trending-product__features {
+  grid-area: features;
+}
+
+.trending-product__button {
+  grid-area: button;
+  align-self: center;
+}
+
+.trending-product__description {
+  grid-area: price;
+}

@@ -1,0 +1,28 @@
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  text-align: center;
+  .list-style-none();
+}
+
+.advantages__item {
+  padding: 60px 25px 45px;
+  box-shadow: 0 0 15px lighten(@color-black, 90%);
+}
+
+.advantages__title {
+  font-family: "Josefin Sans", "Roboto", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  color: @color-midnight-blue;
+}
+
+.advantages__description {
+  font-family: "Lato", "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  color: rgb(@color-midnight-blue, 30%);
+}
