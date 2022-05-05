@@ -61,15 +61,24 @@
         </ul>
         <ul class="header__list header__list--navigation top-list top-list--navigation">
           <li class="top-list__item">
-            <select class="top-list__link" name="language" id="select-language">
-              <option value="en" selected>English</option>
-            </select>
+            <form class="top-list__select form-dropdown form-dropdown--open" action="#" method="get">
+              <span class="form-dropdown__label" tabindex="0">English</span>
+              <ul class="form-dropdown__list">
+                <li class="form-dropdown__item form-dropdown__item--active" tabindex="0">English</li>
+                <li class="form-dropdown__item" tabindex="0">Russia</li>
+                <li class="form-dropdown__item" tabindex="0">Hindi (sanskritised Hindustani)</li>
+              </ul>
+            </form>
           </li>
           <li class="top-list__item">
-            <select class="top-list__link" name="currency" id="select-currency">
-              <option value="usd" selected>USD</option>
-              <option value="usd">EUR</option>
-            </select>
+            <form class="top-list__select form-dropdown" action="#" method="get">
+              <span class="form-dropdown__label" tabindex="0">USD</span>
+              <ul class="form-dropdown__list">
+                <li class="form-dropdown__item form-dropdown__item--active" tabindex="0">USD</li>
+                <li class="form-dropdown__item" tabindex="0">EUR</li>
+                <li class="form-dropdown__item" tabindex="0">TRY</li>
+              </ul>
+            </form>
           </li>
           <li class="top-list__item">
             <a href="myaccount.html" class="top-list__link">

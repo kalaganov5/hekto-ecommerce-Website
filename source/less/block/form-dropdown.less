@@ -1,0 +1,71 @@
+.form-dropdown {
+  color: @color-white-smoke;
+  font-family: inherit;
+  font-weight: inherit;
+  position: relative;
+
+  &--open {
+    & .form-dropdown__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .form-dropdown__label::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.form-dropdown__label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+
+  &::after {
+    content: "";
+    margin-left: 4px;
+    background-image: url("../img/icons/icon-chevron-down.svg");
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center right;
+    width: 16px;
+    height: 16px;
+    transition: transform 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.form-dropdown__list {
+  .list-style-none;
+  display: none;
+  width: auto;
+  z-index: 10;
+  background-color: @color-lavender;
+  color: @color-black;
+  margin-top: 7px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  position: absolute;
+  box-shadow: 3px 3px 10px lighten(@color-black, 70%);
+}
+
+.form-dropdown__item {
+  padding: 15px;
+
+  &--active {
+    background-color: @color-violet;
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  &:hover:not(&--active) {
+    cursor: pointer;
+    background-color: @color-wild-blue-yonder;
+  }
+}
