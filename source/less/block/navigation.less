@@ -20,17 +20,17 @@
   position: absolute;
 }
 
-.navigation__item:hover {
+.navigation__item {
+  &:hover {
+    & .navigation__second-list {
+      display: flex;
+      flex-direction: column;
+    }
 
-  & .navigation__second-list {
-    display: flex;
-    flex-direction: column;
+    & .navigation__link:not(:only-child)::after {
+      transform: rotate(180deg);
+    }
   }
-
-  & .navigation__link:not(:only-child)::after {
-    transform: rotate(180deg);
-  }
-
 }
 
 .navigation__link,
@@ -44,6 +44,7 @@
   position: relative;
 
   &:not(:only-child) {
+    margin-right: -13px;
     padding-right: 15px;
   }
 
@@ -54,7 +55,7 @@
     width: 16px;
     height: 16px;
     transition: transform 0.6s cubic-bezier(0.85, 0, 0.15, 1);
-    top: calc(50% - 7px);
+    top: calc(50% - 8px);
   }
 
   &:hover {
