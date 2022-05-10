@@ -1,31 +1,93 @@
+div.trending-product {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .trending-product {
-  .outline();
+  width: 100%;
+  background-color: @color-ghost-white;
   display: grid;
-  grid-template-columns: 1fr 0.5fr 0.5fr;
-  grid-auto-rows: min-content;
-  grid-template-areas:
-    "image title title"
-    "image features features"
-    "image button price";
+  grid-template-columns:
+    minmax(20px, auto)
+    @width-desktop-wrapper / 2 + 20px
+    @width-desktop-wrapper / 2 - 20px
+    minmax(20px, auto);
+  padding-top: 35px;
+  padding-bottom: 65px;
 }
 
 .trending-product__image-wrapper {
-  grid-area: image;
+  grid-column: ~"2/3";
+  transform: translate(50px, 2px);
 }
 
 .trending-product__title {
-  grid-area: title;
+  font-family: "Lato", "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 46px;
+  letter-spacing: 2px;
+  color: @color-midnight-blue;
+  margin-top: 60px;
+}
+
+.trending-product__info {
+  grid-column: ~"3/4";
 }
 
 .trending-product__features {
-  grid-area: features;
+  .list-style-none();
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: @color-wistful;
+  padding-left: 23px;
+  margin-bottom: 25px;
+  letter-spacing: 0.4px;
+}
+
+.trending-features__item {
+  position: relative;
+  margin-bottom: 10px;
+
+  &::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-color: @color-han-purple;
+    top: 8px;
+    left: -24px;
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  &:nth-child(3n+1)::before {
+    background-color: @color-radical-red;
+  }
+
+  &:nth-child(3n+3)::before {
+    background-color: @color-turquoise;
+  }
+}
+
+.trending-product__cta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  align-items: center;
 }
 
 .trending-product__button {
-  grid-area: button;
-  align-self: center;
+  min-width: 155px;
 }
 
 .trending-product__description {
-  grid-area: price;
+  font-family: "Josefin Sans", "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: @color-midnight-blue;
 }
