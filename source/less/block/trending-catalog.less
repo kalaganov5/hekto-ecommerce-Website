@@ -1,0 +1,19 @@
+ul.trending-catalog__list {
+  margin-bottom: 39px;
+}
+
+.trending-catalog__inner {
+  display: grid;
+  grid-template-columns: calc(@width-desktop-wrapper / 4 * 3 - 8px) calc(@width-desktop-wrapper / 4 - 21px);
+  column-gap: 29px;
+}
+
+.trending-catalog__offers {
+  grid-column: ~"1/2";
+  grid-row: ~"1/1";
+}
+
+.trending-catalog__list-vertical {
+  grid-column: ~"2/2";
+  grid-row: ~"1/1";
+}
