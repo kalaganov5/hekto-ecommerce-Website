@@ -1,0 +1,36 @@
+.discount-features {
+  .list-style-none();
+  display: grid;
+  max-width: 550px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+  color: @color-lavender-grey-lighten;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.discount-features__item {
+  padding-left: calc(24px + 5px);
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    left: 8px;
+    position: absolute;
+    width: 17px;
+    height: 2px;
+    top: 15px;
+    border-radius: 10px;
+    transform: rotate(-45deg);
+    background-color: @color-blue-marguerite;
+  }
+
+  &::after {
+    width: 9.4px;
+    transform: rotate(45deg);
+    top: 17.2px;
+    left: 4px;
+  }
+}

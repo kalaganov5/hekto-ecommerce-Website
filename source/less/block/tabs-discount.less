@@ -1,0 +1,54 @@
+.tabs-discount {
+  .list-style-none();
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Lato", "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  gap: 10px 12px;
+  color: @color-midnight-blue;
+}
+
+.discount-items__title {
+  margin-bottom: 30px;
+}
+
+.tabs-discount__label {
+  margin-right: 12px;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: @color-wild-strawberry;
+  }
+}
+
+.tabs-discount__input {
+  &:checked ~ .tabs-discount__label {
+    text-decoration: underline;
+    color: @color-wild-strawberry;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+
+    &::after {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: @color-wild-strawberry;
+      margin-left: 7px;
+      margin-top: 4px;
+    }
+  }
+}
+
+.discount-items__tabs {
+  margin-bottom: 50px;
+}
