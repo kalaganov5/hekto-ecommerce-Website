@@ -1,6 +1,9 @@
 import {sliderHeader} from './slider-header.js';
 import {sliderFeatures} from './slider-features.js';
-import {latestProductToggle} from './latest-product-toggle.js';
+import {tabsToggle} from './tabs-toggle.js';
 sliderHeader;
 sliderFeatures;
-latestProductToggle();
+// latest slider
+tabsToggle('tabs-products', 'content-latest-products');
+// discount slider
+tabsToggle('tabs-discount', 'discount-products');
