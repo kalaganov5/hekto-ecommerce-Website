@@ -1,0 +1,21 @@
+.popular-pagination {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 17px;
+  margin-bottom: 10px;
+}
+
+.popular-pagination__item {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid @color-wild-strawberry;
+  cursor: pointer;
+
+  &--active {
+    background-color: @color-wild-strawberry;
+  }
+}

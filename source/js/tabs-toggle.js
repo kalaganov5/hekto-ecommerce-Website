@@ -3,7 +3,7 @@
  * @param {string} tabClassName
  * @param {string} sliderClassName
  */
- export const tabsToggle = (tabClassName, sliderClassName) => {
+export const tabsToggle = (tabClassName, sliderClassName) => {
   const inputClassName = `${tabClassName}__input`;
   const itemClassName = `${sliderClassName}__item`;
   const tabs = document.querySelector(`.${tabClassName}`);
