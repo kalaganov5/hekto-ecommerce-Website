@@ -1,7 +1,5 @@
 import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js';
 
-console.log(Swiper)
-
 const sliderPopularProducts = new Swiper(".popular-categories__slider", {
   slidesPerView: 4,
   spaceBetween: 40,
@@ -18,7 +16,5 @@ const sliderPopularProducts = new Swiper(".popular-categories__slider", {
   slideClass: "products-popular__item",
   wrapperClass: "products-popular",
 });
-
-console.log(sliderPopularProducts)
 
 export {sliderPopularProducts};
