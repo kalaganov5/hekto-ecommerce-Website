@@ -1,0 +1,86 @@
+.footer {
+  background-color: @color-lavender;
+  padding-top: 95px;
+  display: grid;
+  grid-template-columns:
+    minmax(20px, auto)
+    440px
+    repeat(3, calc((@width-desktop-wrapper - 440px) / 3))
+    minmax(20px, auto);
+  row-gap: 100px;
+
+
+  & .footer__section:not(.footer__section--navigation) {
+    padding-right: 20px;
+  }
+}
+
+.footer__info {
+  grid-column: ~"2/3";
+  padding-right: 20px;
+}
+
+.footer__container-logo {
+  margin-bottom: 30px;
+}
+
+.footer__section {
+  &--info {
+    grid-column: ~"3/4";
+  }
+
+  &--customer-menu {
+    grid-column: ~"4/5";
+  }
+
+  &--navigation {
+    grid-column: ~"5/6";
+  }
+}
+
+.footer__bottom {
+  background-color: @color-lavender-medium;
+  grid-column: ~"1/-1";
+  display: grid;
+  grid-template-columns: minmax(20px, auto) repeat(2, calc(@width-desktop-wrapper / 2)) minmax(20px, auto);
+  font-size: 16px;
+  line-height: 19px;
+  color: @color-mischka;
+  padding: 15px 0;
+}
+
+.footer__copyright {
+  grid-column: ~"2/3";
+}
+
+.footer__social {
+  grid-column: ~"3/4";
+}
+
+.footer__contact {
+  color: @color-wild-blue-yonder;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 10px;
+}
+
+.footer__address {
+  margin-top: 10px;
+  color: @color-wild-blue-yonder;
+  font-size: 16px;
+  line-height: 19px;
+  font-style: normal;
+}
+
+.footer__email {
+  margin-bottom: 25px;
+}
+
+.footer__title {
+  font-family: "Josefin Sans", "Roboto", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  color: @color-black;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
