@@ -48,30 +48,6 @@ div.trending-product {
   letter-spacing: 0.4px;
 }
 
-.trending-features__item {
-  position: relative;
-  margin-bottom: 10px;
-
-  &::before {
-    content: "";
-    width: 11px;
-    height: 11px;
-    background-color: @color-han-purple;
-    top: 8px;
-    left: -24px;
-    position: absolute;
-    border-radius: 50%;
-  }
-
-  &:nth-child(3n+1)::before {
-    background-color: @color-radical-red;
-  }
-
-  &:nth-child(3n+3)::before {
-    background-color: @color-turquoise;
-  }
-}
-
 .trending-product__cta {
   display: flex;
   flex-direction: row;
