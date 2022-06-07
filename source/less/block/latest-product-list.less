@@ -17,6 +17,19 @@
   align-items: center;
   background-image: linear-gradient(to bottom, @color-white-smoke-light 270px, transparent 270px);
   padding-top: 10px;
+  position: relative;
+
+  &--sale {
+    &::before {
+      content: "";
+      width: 87px;
+      height: 59px;
+      background-image: url("../img/icons/icon-sale.svg");
+      top: 25px;
+      left: 18px;
+      position: absolute;
+    }
+  }
 
   &:hover,
   &:focus,
